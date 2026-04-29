@@ -1,0 +1,33 @@
+
+
+# dbt
+clickhouse_dbt/target/
+clickhouse_dbt/dbt_packages/
+clickhouse_dbt/logs/
+.user.yml
+
+# profiles (contains credentials)
+profiles.yml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive
+*.key
+*.pem
+*.secret

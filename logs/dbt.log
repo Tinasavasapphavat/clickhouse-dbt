@@ -1,0 +1,80 @@
+[0m22:28:32.175116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cd0c830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc5bd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc5bed0>]}
+
+
+============================== 22:28:32.177491 | d7abbeb5-7144-47d2-a0a1-1feb5cfa258e ==============================
+[0m22:28:32.177491 [info ] [MainThread]: Running with dbt=1.11.8
+[0m22:28:32.177707 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'target_path': 'None', 'printer_width': '80', 'fail_fast': 'False', 'log_path': 'logs', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'debug': 'False', 'indirect_selection': 'eager', 'warn_error': 'None', 'use_experimental_parser': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt init .', 'log_cache_events': 'False', 'partial_parse': 'True', 'static_parser': 'True', 'write_json': 'True', 'empty': 'None', 'profiles_dir': '/Users/boederijmac/.dbt', 'send_anonymous_usage_stats': 'True', 'version_check': 'True'}
+[0m22:28:32.184843 [info ] [MainThread]: Creating dbt configuration folder at /Users/boederijmac/.dbt
+[0m22:29:17.456740 [debug] [MainThread]: Starter project path: /Users/boederijmac/Documents/.main/lib/python3.13/site-packages/dbt/include/starter_project
+[0m22:29:17.474417 [info ] [MainThread]: 
+Your new dbt project "clickhouse_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:29:17.474996 [info ] [MainThread]: Setting up your profile.
+[0m22:29:42.037325 [info ] [MainThread]: No sample profile found for clickhouse.
+[0m22:29:42.040513 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 69.90045, "process_in_blocks": "0", "process_kernel_time": 0.131206, "process_mem_max_rss": "117620736", "process_out_blocks": "0", "process_user_time": 0.483022}
+[0m22:29:42.040897 [debug] [MainThread]: Command `dbt init` succeeded at 22:29:42.040813 after 69.90 seconds
+[0m22:29:42.041219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcead70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddcd6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddc85a0>]}
+[0m22:29:42.041477 [debug] [MainThread]: Flushing usage events
+[0m22:29:42.583315 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:31:13.066681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cd9c830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcebd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcebed0>]}
+
+
+============================== 22:31:13.069059 | 0861c178-7b23-4d76-8240-330449e7f395 ==============================
+[0m22:31:13.069059 [info ] [MainThread]: Running with dbt=1.11.8
+[0m22:31:13.069283 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'introspect': 'True', 'warn_error': 'None', 'log_path': 'logs', 'profiles_dir': '/Users/boederijmac/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'invocation_command': 'dbt debug', 'empty': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'debug': 'False', 'log_format': 'default', 'printer_width': '80', 'static_parser': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'fail_fast': 'False', 'target_path': 'None'}
+[0m22:31:13.077120 [info ] [MainThread]: dbt version: 1.11.8
+[0m22:31:13.077267 [info ] [MainThread]: python version: 3.13.7
+[0m22:31:13.077358 [info ] [MainThread]: python path: /Users/boederijmac/Documents/.main/bin/python3.13
+[0m22:31:13.077438 [info ] [MainThread]: os info: macOS-26.4-arm64-arm-64bit-Mach-O
+[0m22:31:13.077528 [info ] [MainThread]: Using profiles dir at /Users/boederijmac/.dbt
+[0m22:31:13.077602 [info ] [MainThread]: Using profiles.yml file at /Users/boederijmac/.dbt/profiles.yml
+[0m22:31:13.077674 [info ] [MainThread]: Using dbt_project.yml file at /Users/boederijmac/Documents/project/clickhouse-dbt/dbt_project.yml
+[0m22:31:13.077755 [info ] [MainThread]: Configuration:
+[0m22:31:13.077827 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m22:31:13.077896 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m22:31:13.077963 [info ] [MainThread]: Required dependencies:
+[0m22:31:13.078064 [debug] [MainThread]: Executing "git --help"
+[0m22:31:13.097928 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:31:13.098307 [debug] [MainThread]: STDERR: "b''"
+[0m22:31:13.098428 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:31:13.098535 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m22:31:13.098700 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m22:31:13.098779 [info ] [MainThread]: dbt looked for a profiles.yml file in /Users/boederijmac/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m22:31:13.098873 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/boederijmac/Documents/project/clickhouse-dbt/dbt_project.yml> not found
+
+[0m22:31:13.099949 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.06510279, "process_in_blocks": "0", "process_kernel_time": 0.107448, "process_mem_max_rss": "118505472", "process_out_blocks": "0", "process_user_time": 0.466957}
+[0m22:31:13.100133 [debug] [MainThread]: Command `dbt debug` failed at 22:31:13.100097 after 0.07 seconds
+[0m22:31:13.100311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd71480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd41fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd757b0>]}
+[0m22:31:13.100460 [debug] [MainThread]: Flushing usage events
+[0m22:31:13.669849 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.173"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019dc65e-43ec-7090-be5a-1daf62deb1b9","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.173","name":"MainReportVersion","pid":92291,"thread":"tokio-rt-worker","ts":"2026-04-25T20:39:19.807199Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"/Users/boederijmac/.local/bin/dbt license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019dc65e-43ec-7090-be5a-1daf62deb1b9","level":"debug","msg":"running dbt-fusion with argumets {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":92291,"thread":"tokio-rt-worker","ts":"2026-04-25T20:39:19.807211Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019dc65e-43ec-7090-be5a-1daf62deb1b9","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":92291,"thread":"tokio-rt-worker","ts":"2026-04-25T20:39:19.810375Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019dc65e-43ec-7090-be5a-1daf62deb1b9","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":92291,"thread":"tokio-rt-worker","ts":"2026-04-25T20:39:19.811123Z"}}
+{"data":{"completed_at":"2026-04-25T20:39:19.957764Z","elapsed":0.15262898802757263,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019dc65e-43ec-7090-be5a-1daf62deb1b9","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [152ms]","name":"CommandCompleted","pid":92291,"thread":"tokio-rt-worker","ts":"2026-04-25T20:39:19.958421Z"}}
+{"data":{"log_version":3,"version":"=2.0.0-preview.173"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019ddaba-d02c-7e33-8a77-86f90d65b94b","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.173","name":"MainReportVersion","pid":24372,"thread":"tokio-rt-worker","ts":"2026-04-29T19:32:49.337669Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"/Users/boederijmac/.local/bin/dbt license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019ddaba-d02c-7e33-8a77-86f90d65b94b","level":"debug","msg":"running dbt-fusion with argumets {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":24372,"thread":"tokio-rt-worker","ts":"2026-04-29T19:32:49.337677Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019ddaba-d02c-7e33-8a77-86f90d65b94b","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":24372,"thread":"tokio-rt-worker","ts":"2026-04-29T19:32:49.339658Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019ddaba-d02c-7e33-8a77-86f90d65b94b","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":24372,"thread":"tokio-rt-worker","ts":"2026-04-29T19:32:49.340167Z"}}
+{"data":{"completed_at":"2026-04-29T19:32:49.474690Z","elapsed":0.1381470113992691,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019ddaba-d02c-7e33-8a77-86f90d65b94b","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [138ms]","name":"CommandCompleted","pid":24372,"thread":"tokio-rt-worker","ts":"2026-04-29T19:32:49.475503Z"}}

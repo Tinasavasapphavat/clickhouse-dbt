@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: binance
+    schema: binance
+    tables:
+      - name: btcusdt_trades
+        description: Raw BTCUSDT trade data from Binance
+      - name: ethusdt_trades
+        description: Raw ETHUSDT trade data from Binance

@@ -4,6 +4,7 @@
 clickhouse_dbt/target/
 clickhouse_dbt/dbt_packages/
 clickhouse_dbt/logs/
+logs
 .user.yml
 
 # profiles (contains credentials)

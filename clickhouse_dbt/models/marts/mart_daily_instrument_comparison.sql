@@ -4,7 +4,6 @@
         engine = 'MergeTree()',
         order_by = 'trade_date',
         partition_by = 'toYYYYMM(`trade_date`)',
-        unique_key = 'trade_id',
         incremental_strategy = 'delete+insert'
     )
 }}

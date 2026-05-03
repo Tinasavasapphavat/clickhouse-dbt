@@ -124,8 +124,8 @@ All models use the following pattern for efficient incremental loads:
 ```
 This ensures only the previous day's trades are reprocessed, making daily runs fast and cost-effective.
 
-## Resources
+## Resources 
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - [ClickHouse dbt adapter documentation](https://github.com/clickhouse-community/dbt-clickhouse)
 - Check out [dbt Discourse](https://discourse.getdbt.com/) for commonly asked questions
-- Join the [dbt community chat](https://community.getdbt.com/) on Slack
+- Join the [dbt community chat](https://community.getdbt.com/) on Slack 

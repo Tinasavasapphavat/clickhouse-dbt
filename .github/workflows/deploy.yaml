@@ -1,0 +1,99 @@
+name: dbt CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  dbt_test:
+    name: dbt Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt
+        run: pip install dbt-clickhouse
+
+      - name: Create profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << 'PROFILE'
+          clickhouse_dbt:
+            target: dev
+            outputs:
+              dev:
+                type: clickhouse
+                host: ${{ secrets.CLICKHOUSE_HOST }}
+                port: 8123
+                user: ${{ secrets.CLICKHOUSE_USER }}
+                password: ${{ secrets.CLICKHOUSE_PASSWORD }}
+                schema: binance
+                secure: false
+          PROFILE
+
+      - name: dbt debug
+        working-directory: clickhouse_dbt
+        run: dbt debug
+
+      - name: dbt compile
+        working-directory: clickhouse_dbt
+        run: dbt compile
+
+      - name: dbt test
+        working-directory: clickhouse_dbt
+        run: dbt test
+
+  dbt_deploy:
+    name: dbt Deploy
+    runs-on: ubuntu-latest
+    needs: dbt_test
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt
+        run: pip install dbt-clickhouse
+
+      - name: Create profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << 'PROFILE'
+          clickhouse_dbt:
+            target: prod
+            outputs:
+              prod:
+                type: clickhouse
+                host: ${{ secrets.CLICKHOUSE_HOST }}
+                port: 8123
+                user: ${{ secrets.CLICKHOUSE_USER }}
+                password: ${{ secrets.CLICKHOUSE_PASSWORD }}
+                schema: binance
+                secure: false
+          PROFILE
+
+      - name: dbt run
+        working-directory: clickhouse_dbt
+        run: dbt run
+
+      - name: dbt test
+        working-directory: clickhouse_dbt
+        run: dbt test
